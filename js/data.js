@@ -50,7 +50,7 @@ const CHAPTERS = {
 };
 
 /* "Crew Knowledge and Proficiency" subsections: the questions the inspector asks the crew */
-const KNOWLEDGE = ["3.3", "4.2", "6.5", "7.2", "8.3", "9.2", "10.2", "11.4"];
+const KNOWLEDGE = ["3.3", "5.6", "5.13", "4.2", "6.5", "7.2", "8.3", "9.2", "10.2", "11.4"];
 
 /* Company SQEMS books */
 const MANUALS = {

@@ -9,10 +9,10 @@ An adaptation of [Vetting Inspector](https://github.com/kaptanoguz/VettingInspec
 
 ## Contents
 - **764 CDI questions** from the Core Questionnaire (sections 1–4 and 6–14), with the official statement (English), category **S / R / D / NS**, group **SI / I**, the booklet page and the CDI guidance notes. Questions only for gas carriers or dry bulk vessels (IGC Code, IMSBC, Grain and Timber Codes, cargo holds) are left out.
-- **Section 5 (Chemical / Product cargo)** comes from the separate type-specific booklets and is added when they are imported.
+- **Section 5 (Chemical / Product cargo): 58 questions from a summary workbook, not the booklets.** The type-specific 5C/5P booklets are not available, so `tools/import_cdi_xlsx.py` takes the fully numbered rows of `CDI_SIR_10th_Edition_Full_Questionnaire.xlsx` (Chemical number, with the Product number alongside). The statements are shortened and the app marks each one "Excel summary — not the booklet text"; rows numbered only as "5.5.x" (handling and monitoring equipment, STS, custody) are left out. Import the booklets with `tools/import_cdi.py` when they become available.
 - For every question: a Turkish title, the ranks it concerns and the **company procedure** that answers it (manual book and section, e.g. `B3 §5.3`), with what to show, evidence and common findings. The company procedures are the same SQEMS texts as in Vetting Inspector (B1–B7, MSMP), linked to each CDI question by hand.
-- 728 questions have a company procedure. Most reuse the Vetting Inspector procedures; the rest are written for CDI from the same manuals in `js/proc/cdi.js` (company policies, Master's authority, appraisals, medical locker and first aid, hospital, asbestos, smoking, sewage, energy efficiency and SEEMP, and others). 36 have no counterpart in the manuals (EEDI / EEXI / CII / EIV values and officer knowledge of them, AED, alternative fuels, buoyage, hull markings, funnel); they show the CDI guidance notes only.
-- **Crew Knowledge and Proficiency** questions (3.3, 4.2, 6.5, 7.2, 8.3, 9.2, 10.2, 11.4) are flagged: these are what the inspector asks the crew in the interview.
+- 784 of the 822 questions have a company procedure. Most reuse the Vetting Inspector procedures; the rest are written for CDI from the same manuals in `js/proc/cdi.js` (company policies, Master's authority, appraisals, medical locker and first aid, hospital, asbestos, smoking, sewage, energy efficiency and SEEMP, and others). 38 have none (HVPQ, EEDI / EEXI / CII / EIV values and officer knowledge of them, AED, alternative fuels, buoyage, hull markings, funnel); they show the CDI guidance notes only.
+- **Crew Knowledge and Proficiency** questions (3.3, 4.2, 5.6, 6.5, 7.2, 8.3, 9.2, 10.2, 11.4) are flagged: these are what the inspector asks the crew in the interview.
 - **155 exam questions**, including CDI inspection rules (categories, objective evidence, SI sampling, report validity) and 82 company questions from the manuals.
 
 ## CDI Questionnaire (main menu)
@@ -36,6 +36,7 @@ Engine: Chief Engineer · Second Engineer · ETO · Engine Ratings
 | File | Content |
 |---|---|
 | `js/cdi/core.js` | Generated from the CDI booklets by `tools/import_cdi.py`: statement, Cat, Gp, page, guidance notes. Do not edit by hand. |
+| `js/cdi/sec5.js` | Section 5 from the summary workbook by `tools/import_cdi_xlsx.py` (x: 1 marks a summary statement). Do not edit by hand. |
 | `js/cdi/map-*.js` | Written by hand, one line per CDI question: `M("3.1.21", "Turkish title", "4.1.1", "MS CO")` — the company procedure key(s) and ranks. `D("DECK")` sets the ranks for the lines that follow. |
 | `js/proc/*.js` | The company procedures, written from the SQEMS manuals: `S(key, ranks, highRisk, "TR title", C("Book §section", "EN", "TR"), [EN guide], [TR guide])`. Keys are the SIRE 2.0 topic numbers they were first written for; the same text answers the matching CDI questions. |
 | `js/proc/cdi.js` | Company procedures written for CDI questions that have no SIRE 2.0 counterpart, same format, keys `c-…`. |
@@ -51,7 +52,7 @@ The CDI booklets and the company manuals are confidential or copyrighted and are
 | Path | Use |
 |---|---|
 | `cdi/CDI 10th edition Core.pdf` | CDI SIR Core Questionnaire, all vessel types (10th Edition, v10.4) |
-| `cdi/` Chemical and Product booklets | Section 5 (to be added to `BOOKLETS` in `tools/import_cdi.py`) |
+| `cdi/CDI_SIR_10th_Edition_Full_Questionnaire.xlsx` | Section 5 summary (until the Chemical and Product booklets are available; then add them to `BOOKLETS` in `tools/import_cdi.py`) |
 | `manuals/full/B1.pdf` … `B7.pdf` (+ `.txt`) | Company SQEMS manuals, the same set as in Vetting Inspector |
 | `manuals/pages/` | Cut PDF of every referenced section, produced by `tools/build_manual_pages.py` |
 | `manuals/MSMP_LMP_ADA.pdf` | M/T ADA Mooring System Management Plan and Line Management Plan |

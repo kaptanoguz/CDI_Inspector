@@ -503,3 +503,4 @@ mark { background: var(--mark); color: inherit; padding: 0 2px; }
 }
 
 .rank-head > .muted { margin-top: 8px; max-width: 62ch; }
+.cdi-x { font-weight: 600; color: var(--warn); }
