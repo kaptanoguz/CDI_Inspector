@@ -11,7 +11,7 @@ An adaptation of [Vetting Inspector](https://github.com/kaptanoguz/VettingInspec
 - **764 CDI questions** from the Core Questionnaire (sections 1–4 and 6–14), with the official statement (English), category **S / R / D / NS**, group **SI / I**, the booklet page and the CDI guidance notes. Questions only for gas carriers or dry bulk vessels (IGC Code, IMSBC, Grain and Timber Codes, cargo holds) are left out.
 - **Section 5 (Chemical / Product cargo)** comes from the separate type-specific booklets and is added when they are imported.
 - For every question: a Turkish title, the ranks it concerns and the **company procedure** that answers it (manual book and section, e.g. `B3 §5.3`), with what to show, evidence and common findings. The company procedures are the same SQEMS texts as in Vetting Inspector (B1–B7, MSMP), linked to each CDI question by hand.
-- 676 questions have a company procedure. 88 have no counterpart in the procedures written so far (company policy statement, medical locker and first aid, SEEMP / EEXI / CII, asbestos, sewage and a few others); they show the CDI guidance notes only until the manual sections are added.
+- 728 questions have a company procedure. Most reuse the Vetting Inspector procedures; the rest are written for CDI from the same manuals in `js/proc/cdi.js` (company policies, Master's authority, appraisals, medical locker and first aid, hospital, asbestos, smoking, sewage, energy efficiency and SEEMP, and others). 36 have no counterpart in the manuals (EEDI / EEXI / CII / EIV values and officer knowledge of them, AED, alternative fuels, buoyage, hull markings, funnel); they show the CDI guidance notes only.
 - **Crew Knowledge and Proficiency** questions (3.3, 4.2, 6.5, 7.2, 8.3, 9.2, 10.2, 11.4) are flagged: these are what the inspector asks the crew in the interview.
 - **155 exam questions**, including CDI inspection rules (categories, objective evidence, SI sampling, report validity) and 82 company questions from the manuals.
 
@@ -38,6 +38,7 @@ Engine: Chief Engineer · Second Engineer · ETO · Engine Ratings
 | `js/cdi/core.js` | Generated from the CDI booklets by `tools/import_cdi.py`: statement, Cat, Gp, page, guidance notes. Do not edit by hand. |
 | `js/cdi/map-*.js` | Written by hand, one line per CDI question: `M("3.1.21", "Turkish title", "4.1.1", "MS CO")` — the company procedure key(s) and ranks. `D("DECK")` sets the ranks for the lines that follow. |
 | `js/proc/*.js` | The company procedures, written from the SQEMS manuals: `S(key, ranks, highRisk, "TR title", C("Book §section", "EN", "TR"), [EN guide], [TR guide])`. Keys are the SIRE 2.0 topic numbers they were first written for; the same text answers the matching CDI questions. |
+| `js/proc/cdi.js` | Company procedures written for CDI questions that have no SIRE 2.0 counterpart, same format, keys `c-…`. |
 | `js/proc/rating.js` | Rating pocket guide (21 items) from the company rating interview document. |
 | `js/exam.js` | Exam: `Q(...)` general, `QC("Book §section", ...)` company question. |
 | `js/manual-pages.js` | Section → manual page index for clickable references (generated). |

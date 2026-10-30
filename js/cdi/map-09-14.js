@@ -90,7 +90,7 @@ M("10.1.15", "Filika/can salı kapasitesinin kişi sayısına yeterliliği", "5.
 M("10.1.16", "Filika kullanım talimatlarının filika yanında asılı olması", "5.4.1");
 M("10.1.17", "Can salı kullanım talimatlarının can salı yanında asılı olması", "5.4.5");
 M("10.1.18", "Talimatlarda IMO sembollerinin kullanılması", "5.4.5", "MS CO 3O");
-M("10.1.19", "Toplanma ve biniş istasyonu acil aydınlatması", "");
+M("10.1.19", "Toplanma ve biniş istasyonu acil aydınlatması", "5.4.9");
 M("10.1.20", "Uzak konumlu can kurtarma araçlarının durumu", "5.4.5");
 M("10.1.21", "Can yeleği gerekliliklerinin karşılanması", "5.4.8");
 M("10.1.22", "Daldırma elbisesi / ısıl koruma gerekliliklerinin karşılanması", "5.4.7");
@@ -108,7 +108,7 @@ M("10.1.33", "Can kurtarma araçlarına kaçış yollarının işaretli, açık 
 M("10.1.34", "Her can kurtarma aracının muayene ve bakım kaydı", "5.2.7", "MS CO 3O");
 M("10.1.35", "Haftalık ve aylık LSA muayenelerinin jurnale kaydı", "5.2.7 5.4.1", "MS CO 3O");
 M("10.1.36", "Uygun tasarımda sedye", "5.1.4", "MS CO 2O 3O");
-M("10.1.37", "Gemideki kişi sayısının Form E sınırları içinde olması", "", "MS");
+M("10.1.37", "Gemideki kişi sayısının Form E sınırları içinde olması", "c-pob", "MS");
 M("10.1.38", "Denizden insan kurtarma için gemiye özel plan", "5.1.15", "MS CO 3O");
 
 /* 10.2 Crew Knowledge and Proficiency — Lifesaving */
@@ -157,35 +157,35 @@ M("11.1.36", "Gemiye özel Balast Suyu Yönetim Planı", "2.6.1", "MS CO");
 M("11.1.37", "Gerektiğinde balast suyu arıtma sistemi kurulu", "6.3.1", "MS CO CE");
 M("11.1.38", "Balast suyu arıtma sisteminin çalışması ve kayıtları", "6.3.1", "CO CE 2E");
 M("11.1.39", "Balast arıtma kimyasalları / biyositlerinin tehlikelerinin bilinmesi", "6.3.1", "CO CE 2E DR ER");
-M("11.1.40", "Enerji yönetimi politikası", "", "MS CE");
-M("11.1.41", "Egzoz gazı veya atık ısı kazanı", "", "CE 2E");
+M("11.1.40", "Enerji yönetimi politikası", "c-energy-policy", "MS CE");
+M("11.1.41", "Egzoz gazı veya atık ısı kazanı", "c-energy-ops", "CE 2E");
 M("11.1.42", "Yük soğutma / ısıtma prosedürleri", "8.3.21", "MS CO CE");
 M("11.1.43", "Ana ve yardımcı makine performans izleme prosedürleri", "10.4.1", "CE 2E");
-M("11.1.44", "Tüm personele enerji tasarrufu eğitimi", "", "MS CE");
-M("11.1.45", "Makine ve donanımın emniyetli ve verimli işletilmesi prosedürleri", "", "CE 2E");
+M("11.1.44", "Tüm personele enerji tasarrufu eğitimi", "c-energy-training", "MS CE");
+M("11.1.45", "Makine ve donanımın emniyetli ve verimli işletilmesi prosedürleri", "c-energy-ops", "CE 2E");
 
 /* 11.2 Sustainability / SEEMP · 11.3 EEXI, EEDI, EIV & CII */
 D("MS CE");
-M("11.2.1",  "SEEMP Bölüm I", "");
-M("11.2.2",  "SEEMP Bölüm II (yakıt tüketimi veri toplama)", "");
-M("11.2.3",  "SEEMP Bölüm III (CII uygulama planı)", "");
-M("11.2.4",  "Gemiye özel SEEMP Bölüm III içeriği", "");
-M("11.2.5",  "SEEMP önlemi: optimize sefer planlaması", "", "MS CE CO");
-M("11.2.6",  "SEEMP önlemi: hava rotalaması", "");
-M("11.2.7",  "SEEMP önlemi: tam zamanında varış (Just in Time)", "");
-M("11.2.8",  "SEEMP önlemi: hız optimizasyonu", "");
-M("11.2.9",  "SEEMP önlemi: şaft gücü optimizasyonu", "");
-M("11.2.10", "SEEMP önlemi: optimum trim", "", "MS CE CO");
-M("11.2.11", "SEEMP önlemi: optimum balast", "", "MS CE CO");
-M("11.2.12", "SEEMP önlemi: pervane tasarımı optimizasyonu", "");
-M("11.2.13", "SEEMP önlemi: dümen kullanımı optimizasyonu", "");
-M("11.2.14", "SEEMP önlemi: karina bakımı", "");
-M("11.2.15", "SEEMP önlemi: sevk sistemi", "");
-M("11.2.16", "SEEMP önlemi: atık ısı geri kazanımı", "");
-M("11.2.17", "SEEMP önlemi: iyileştirilmiş yük elleçleme", "", "MS CE CO");
-M("11.2.18", "SEEMP önlemi: enerji yönetimi", "");
-M("11.2.19", "SEEMP önlemi: yakıt tipi", "");
-M("11.2.20", "SEEMP önlemi: diğer önlemler", "");
+M("11.2.1",  "SEEMP Bölüm I", "c-seemp");
+M("11.2.2",  "SEEMP Bölüm II (yakıt tüketimi veri toplama)", "c-seemp");
+M("11.2.3",  "SEEMP Bölüm III (CII uygulama planı)", "c-seemp");
+M("11.2.4",  "Gemiye özel SEEMP Bölüm III içeriği", "c-seemp");
+M("11.2.5",  "SEEMP önlemi: optimize sefer planlaması", "c-seemp", "MS CE CO");
+M("11.2.6",  "SEEMP önlemi: hava rotalaması", "c-seemp");
+M("11.2.7",  "SEEMP önlemi: tam zamanında varış (Just in Time)", "c-seemp");
+M("11.2.8",  "SEEMP önlemi: hız optimizasyonu", "c-seemp");
+M("11.2.9",  "SEEMP önlemi: şaft gücü optimizasyonu", "c-seemp");
+M("11.2.10", "SEEMP önlemi: optimum trim", "c-seemp", "MS CE CO");
+M("11.2.11", "SEEMP önlemi: optimum balast", "c-seemp", "MS CE CO");
+M("11.2.12", "SEEMP önlemi: pervane tasarımı optimizasyonu", "c-seemp");
+M("11.2.13", "SEEMP önlemi: dümen kullanımı optimizasyonu", "c-seemp");
+M("11.2.14", "SEEMP önlemi: karina bakımı", "c-seemp");
+M("11.2.15", "SEEMP önlemi: sevk sistemi", "c-seemp");
+M("11.2.16", "SEEMP önlemi: atık ısı geri kazanımı", "c-seemp");
+M("11.2.17", "SEEMP önlemi: iyileştirilmiş yük elleçleme", "c-seemp", "MS CE CO");
+M("11.2.18", "SEEMP önlemi: enerji yönetimi", "c-seemp");
+M("11.2.19", "SEEMP önlemi: yakıt tipi", "c-seemp");
+M("11.2.20", "SEEMP önlemi: diğer önlemler", "c-seemp");
 M("11.2.21", "EEDI veya EEXI Teknik Dosyası", "");
 M("11.2.22", "NOx teknik dosyasının gemide ve güncel olması", "6.1.6");
 M("11.3.1",  "Gerekli EEXI değeri var mı", "");
@@ -226,7 +226,7 @@ M("11.4.8",  "Uyumsuz yüklerin döküntü haznesinde / drenajda karışma tehli
 M("11.4.9",  "Küçük kaplarla numune alırken elektrostatik deşarj tehlikesi", "8.3.5", "CO 2O 3O DR");
 M("11.4.10", "Kıdemli zabitler: EEXI gereklilikleri", "", "MS CO CE 2E");
 M("11.4.11", "Kıdemli zabitler: CII gereklilikleri", "", "MS CO CE 2E");
-M("11.4.12", "Kıdemli zabitler: gemiye özel SEEMP ve enerji verimliliği önlemleri", "", "MS CO CE 2E");
+M("11.4.12", "Kıdemli zabitler: gemiye özel SEEMP ve enerji verimliliği önlemleri", "c-seemp", "MS CO CE 2E");
 
 /* 12 Security */
 D("ALL");
