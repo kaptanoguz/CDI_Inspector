@@ -71,7 +71,8 @@ const T = {
         openPdf: "Manuelde aç · sayfa",
         colNo: "No", colQ: "Soru", colRef: "Şirket prosedürü", colRes: "Cevap", colRem: "Gözlem", colDept: "Departman",
         catLong: { S: "Statutory — uluslararası kural", R: "Recommended — sektör uygulaması", D: "Desirable — CDI katılımcıları", NS: "Non-scoring — bilgi amaçlı", "": "Bilgi girişi" },
-        gpLong: { SI: "SI — self-inspection sorusu", I: "I — denetçi sorusu" }, page: "kitapçık s."
+        gpLong: { SI: "SI — self-inspection sorusu", I: "I — denetçi sorusu" }, page: "kitapçık s.",
+        summary: "Excel özeti — kitapçık metni değil", prodNo: "Ürün (5P)"
     },
     en: {
         brandSub: "CDI SIR preparation · company SQEMS",
@@ -134,7 +135,8 @@ const T = {
         openPdf: "Open in manual · page",
         colNo: "No", colQ: "Question", colRef: "Company procedure", colRes: "Answer", colRem: "Observation", colDept: "Department",
         catLong: { S: "Statutory — international regulation", R: "Recommended — industry practice", D: "Desirable — CDI participants", NS: "Non-scoring — information", "": "Information entry" },
-        gpLong: { SI: "SI — self-inspection question", I: "I — inspection question" }, page: "booklet p."
+        gpLong: { SI: "SI — self-inspection question", I: "I — inspection question" }, page: "booklet p.",
+        summary: "Excel summary — not the booklet text", prodNo: "Product (5P)"
     }
 };
 
@@ -484,7 +486,7 @@ function cdiQuote(i) {
     const o = official(i);
     if (!o.q) return "";
     return `<blockquote class="sire" lang="en"><span class="label">${t("sireQ")} ${i.id}
-        <span class="cdi-tags">${esc(t("catLong")[i.cat] || "")}${i.gp ? ` · ${esc(t("gpLong")[i.gp])}` : ""} · ${t("page")} ${o.p}</span></span>${esc(o.q)}</blockquote>`;
+        <span class="cdi-tags">${esc(t("catLong")[i.cat] || "")}${i.gp ? ` · ${esc(t("gpLong")[i.gp])}` : ""}${o.alt ? ` · ${t("prodNo")} ${esc(o.alt)}` : ""}${o.x ? ` · <b class="cdi-x">${t("summary")}</b>` : ` · ${t("page")} ${o.p}`}</span></span>${esc(o.q)}</blockquote>`;
 }
 
 /* CDI guidance notes (English): a range note ("1.1.1-36") is shown on every question it covers */
