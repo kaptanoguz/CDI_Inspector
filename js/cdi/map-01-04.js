@@ -141,8 +141,8 @@ M("1.4.16", "Son 12 ayda çatışma/çarpma olmaması", "5.7.1", "MS");
 
 /* 2.1 Administration */
 D("MS");
-M("2.1.1",  "Şirketin imzalı ve güncel emniyet, çevre, sağlık ve kalite politikası", "");
-M("2.1.2",  "Politika beyanının gemide görünür yerde olması", "");
+M("2.1.1",  "Şirketin imzalı ve güncel emniyet, çevre, sağlık ve kalite politikası", "c-policy");
+M("2.1.2",  "Politika beyanının gemide görünür yerde olması", "c-policy");
 M("2.1.3",  "Operasyon manuellerinin gemiye uygunluğu", "2.7.1");
 M("2.1.4",  "Manuellerin personelin anladığı dilde olması", "2.7.1 3.1.2");
 M("2.1.5",  "Manuellerde gemi operasyonları talimatları", "2.7.1");
@@ -151,7 +151,7 @@ M("2.1.7",  "Manuellerde gemi yönetimi talimatları", "2.7.1");
 M("2.1.8",  "Manuellerin İngilizce olması", "2.7.1");
 M("2.1.9",  "Gemi-şirket resmi raporlama sistemi", "2.7.2 2.4.1", "MS CE");
 M("2.1.10", "Kaptanın SMS gözden geçirmesi ve eksikliklerin bildirilmesi", "2.2.3");
-M("2.1.11", "Kaptanın emniyet ve kirlilik konusunda üstün yetkisi", "");
+M("2.1.11", "Kaptanın emniyet ve kirlilik konusunda üstün yetkisi", "c-master-auth");
 M("2.1.12", "Dinlenme süreleri için şirket talimatı (STCW / MLC)", "3.4.1", "ALL");
 M("2.1.13", "Herkes için çalışma/dinlenme saati kayıtları", "3.4.1", "ALL");
 M("2.1.14", "Çalışma saatlerinin STCW / MLC'ye uygunluğu", "3.4.1", "ALL");
@@ -159,19 +159,19 @@ M("2.1.15", "SMS'i destekleyen eğitimlerin tanımlı olması", "5.1.1 3.5.1", "
 M("2.1.16", "Kaptan dahil herkesin tanıtım (familiarization) kayıtları", "3.5.1", "ALL");
 M("2.1.17", "Çalışma programlarının erişilebilir yerde asılı olması", "3.4.1", "OFF");
 M("2.1.18", "Vardiya zabit ve tayfalarının çalışma düzeni", "3.4.1");
-M("2.1.19", "Gemi personelinin görev ve rollerinin manuelde tanımlı olması", "", "OFF");
+M("2.1.19", "Gemi personelinin görev ve rollerinin manuelde tanımlı olması", "c-roles", "OFF");
 M("2.1.20", "Kendi gemisinde kurtarma (salvage) sırasında kaptanın sorumlulukları", "5.1.13 9.2.1");
 M("2.1.21", "Lloyd's Open Form kurtarma sözleşmesi kopyası", "5.1.13");
 M("2.1.22", "ISM ve ISPS iç denetimleri ve raporları", "2.2.2", "MS CE");
 M("2.1.23", "Son ISM, ISPS ve MLC dış denetim raporları", "2.2.2", "MS CE");
 M("2.1.24", "Kaptanın gerçek zamanlı seyir değerlendirmeleri", "3.2.2");
 M("2.1.25", "Uygunsuzluk, kaza ve tehlikeli durum bildirme prosedürü", "5.7.2 2.4.1", "OFF");
-M("2.1.26", "Zabit ve tayfalar için performans değerlendirme sistemi", "", "MS CE");
-M("2.1.27", "Değerlendirme raporlama aralığı (ay)", "", "MS CE");
+M("2.1.26", "Zabit ve tayfalar için performans değerlendirme sistemi", "c-appraisal", "MS CE");
+M("2.1.27", "Değerlendirme raporlama aralığı (ay)", "c-appraisal", "MS CE");
 M("2.1.28", "Kıdemli zabitlerin aynı gemiye / benzer gemilere rotasyonu", "3.1.1");
 M("2.1.29", "Genç zabit ve tayfaların benzer gemilere rotasyonu", "3.1.1");
 M("2.1.30", "Kaptan/1. zabit ve başmühendis/2. mühendis değişimlerinin aynı anda olmaması", "3.1.1", "MS CE");
-M("2.1.31", "Liman acentelerini denetleme programı", "");
+M("2.1.31", "Liman acentelerini denetleme programı", "c-agents");
 
 /* 3.1 Navigation and Bridge Organization */
 D("DECK");
@@ -230,7 +230,7 @@ M("3.1.52", "Seyir cihazı kontrollerinin jurnale kaydı", "4.2.6");
 M("3.1.53", "Limana girişte tornistan testinin kaydı", "4.2.6 10.1.2");
 M("3.1.54", "Varış ve kalkışta dümen testinin kaydı", "4.2.6 4.1.3");
 M("3.1.55", "Acil dümen testinin üç ayda bir kaydı", "4.1.3 5.1.12");
-M("3.1.56", "Manevra bilgilerinin köprüüstünde asılı olması", "");
+M("3.1.56", "Manevra bilgilerinin köprüüstünde asılı olması", "c-manoeuvring");
 M("3.1.57", "Otomatik/el dümeni geçiş prosedürünün asılı olması", "4.1.3");
 M("3.1.58", "Acil dümen geçiş prosedürünün köprüüstünde asılı olması", "4.1.3 5.1.12");
 M("3.1.59", "Onaylı, güncel ve sefere uygun haritalar", "4.2.5 4.2.4");
@@ -252,7 +252,7 @@ M("3.1.74", "ECS bakım prosedürü", "4.2.4");
 M("3.1.75", "Seyir fenerleri, işaret ışıkları ve alarmları", "4.1.9");
 M("3.1.76", "Seyir işaretlerinin (şekiller) hazır ve iyi durumda olması", "4.1.9");
 M("3.1.77", "Aldis işaret lambası", "4.1.14");
-M("3.1.78", "Köprüüstü–makine dairesi iletişim bağlantıları", "");
+M("3.1.78", "Köprüüstü–makine dairesi iletişim bağlantıları", "c-bridge-ecr");
 M("3.1.79", "Çatışma önleme sistemine sudaki hız girdisi", "4.1.8 4.1.2");
 M("3.1.80", "VDR testi ve veri saklama doğrulaması", "4.1.11");
 M("3.1.81", "AIS ekran ve klavyesinin seyir mevkiinde olması", "4.1.4");
@@ -278,7 +278,7 @@ M("3.2.13", "Can kurtarma araçları için en az üç portatif VHF", "4.4.3");
 
 /* 3.3 Crew Knowledge and Proficiency — Bridge */
 D("DECK");
-M("3.3.1",  "Vardiya zabitleri: COLREG bilgisi", "");
+M("3.3.1",  "Vardiya zabitleri: COLREG bilgisi", "c-colreg");
 M("3.3.2",  "Vardiya zabitleri: şamandıralama sistemleri", "");
 M("3.3.3",  "Vardiya zabitleri: vardiya devir teslim ve görevleri", "4.2.3");
 M("3.3.4",  "Vardiya zabitleri: kaptanı çağırma prosedürleri ve daimi emirler", "4.2.3");
